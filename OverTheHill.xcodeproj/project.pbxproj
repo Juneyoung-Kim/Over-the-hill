@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		3F31A8C72403BE130094B536 /* ListingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8C62403BE130094B536 /* ListingsCollectionViewController.swift */; };
 		3F31A8C92403BFD20094B536 /* ListingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8C82403BFD20094B536 /* ListingsCollectionViewCell.swift */; };
 		3F31A8CB2403CEFB0094B536 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */; };
+		3FAE35772428859200EDFCCA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FAE35762428859200EDFCCA /* Podfile */; };
+		3FAE358024289B1600EDFCCA /* Homes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE357F24289B1600EDFCCA /* Homes.swift */; };
+		52778F38DA3AB7CDDAC83F1B /* Pods_OverTheHill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		3F31A8C62403BE130094B536 /* ListingsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCollectionViewController.swift; sourceTree = "<group>"; };
 		3F31A8C82403BFD20094B536 /* ListingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		3FAE35762428859200EDFCCA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3FAE357F24289B1600EDFCCA /* Homes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homes.swift; sourceTree = "<group>"; };
+		3FAE358124289CEA00EDFCCA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = "/Users/kimjunyoung/Downloads/NIC/20Winter/IMG214(iOS development)/project/OverTheHill/OverTheHill/default.realm"; sourceTree = "<absolute>"; };
+		93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverTheHill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.release.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.release.xcconfig"; sourceTree = "<group>"; };
+		C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.debug.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52778F38DA3AB7CDDAC83F1B /* Pods_OverTheHill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +60,8 @@
 			children = (
 				3F31A8A7240380730094B536 /* OverTheHill */,
 				3F31A8A6240380730094B536 /* Products */,
+				BCF9F0E99CBE1D2B13E8F14A /* Frameworks */,
+				A5BBD0BEBB38FBBA655562AE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +76,9 @@
 		3F31A8A7240380730094B536 /* OverTheHill */ = {
 			isa = PBXGroup;
 			children = (
+				3FAE358124289CEA00EDFCCA /* default.realm */,
 				3F31A8A8240380730094B536 /* AppDelegate.swift */,
+				3FAE357F24289B1600EDFCCA /* Homes.swift */,
 				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
 				3F31A8B0240380730094B536 /* Main.storyboard */,
 				3F31A8B3240380740094B536 /* Assets.xcassets */,
@@ -79,6 +93,24 @@
 			path = OverTheHill;
 			sourceTree = "<group>";
 		};
+		A5BBD0BEBB38FBBA655562AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */,
+				A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BCF9F0E99CBE1D2B13E8F14A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FAE35762428859200EDFCCA /* Podfile */,
+				93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F31A8BB240380740094B536 /* Build configuration list for PBXNativeTarget "OverTheHill" */;
 			buildPhases = (
+				F93C023021FC717CC9623495 /* [CP] Check Pods Manifest.lock */,
 				3F31A8A1240380730094B536 /* Sources */,
 				3F31A8A2240380730094B536 /* Frameworks */,
 				3F31A8A3240380730094B536 /* Resources */,
+				DBAD24BCEFDAE7F3942AC2DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,11 +173,54 @@
 			files = (
 				3F31A8B7240380740094B536 /* LaunchScreen.storyboard in Resources */,
 				3F31A8B4240380740094B536 /* Assets.xcassets in Resources */,
+				3FAE35772428859200EDFCCA /* Podfile in Resources */,
 				3F31A8B2240380730094B536 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBAD24BCEFDAE7F3942AC2DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OverTheHill/Pods-OverTheHill-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OverTheHill/Pods-OverTheHill-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OverTheHill/Pods-OverTheHill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F93C023021FC717CC9623495 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OverTheHill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F31A8A1240380730094B536 /* Sources */ = {
@@ -152,6 +229,7 @@
 			files = (
 				3F31A8C92403BFD20094B536 /* ListingsCollectionViewCell.swift in Sources */,
 				3F31A8C72403BE130094B536 /* ListingsCollectionViewController.swift in Sources */,
+				3FAE358024289B1600EDFCCA /* Homes.swift in Sources */,
 				3F31A8C52403B5580094B536 /* ProfileViewController.swift in Sources */,
 				3F31A8A9240380730094B536 /* AppDelegate.swift in Sources */,
 				3F31A8CB2403CEFB0094B536 /* ListingViewController.swift in Sources */,
@@ -298,6 +376,7 @@
 		};
 		3F31A8BC240380740094B536 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q52N4ADJ7V;
@@ -315,6 +394,7 @@
 		};
 		3F31A8BD240380740094B536 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q52N4ADJ7V;

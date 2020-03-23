@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let config = Realm.Configuration(
+                   // Get the URL to the bundled file
+                   fileURL: Bundle.main.url(forResource: "Homes", withExtension: "realm"),
+                   // Open the file in read-only mode as application bundles are not writeable
+                   readOnly: true)
+        
+               // Open the Realm with the configuration
+               let realm = try! Realm(configuration: config)
+        
+               // Read some data from the bundled Realm
+               let results = realm.objects(Homes.self)
+               
+        print(results)
+        
+        
         return true
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "cell"
 
@@ -36,10 +37,29 @@ class ListingsCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = padding
         }
         
-        listings.append(ListingInfo(name: "Listing 1", description: "Description about Listing 1"))
-        listings.append(ListingInfo(name: "Listing 2", description: "Description about Listing 2"))
-        listings.append(ListingInfo(name: "Listing 3", description: "Description about Listing 3"))
-        listings.append(ListingInfo(name: "Listing 4", description: "Description about Listing 4"))
+        
+        let config = Realm.Configuration(
+                          // Get the URL to the bundled file
+                          fileURL: Bundle.main.url(forResource: "homes", withExtension: "realm"),
+                          // Open the file in read-only mode as application bundles are not writeable
+                          readOnly: true)
+               
+                      // Open the Realm with the configuration
+                      let realm = try! Realm(configuration: config)
+               
+                      // Read some data from the bundled Realm
+                      let results = realm.objects(Homes.self)
+        
+        
+        
+        listings.append(ListingInfo(name: "\(results[0].BUSINESS_NAME)", description: "Description about Listing 1"))
+        listings.append(ListingInfo(name: "\(results[1].BUSINESS_PHONE)", description: "Description about Listing 2"))
+        listings.append(ListingInfo(name: "\(results[2].CITY)", description: "Description about Listing 3"))
+        listings.append(ListingInfo(name: "\(results[3].POSTAL_CODE)", description: "Description about Listing 4"))
+        
+        
+        
+        
     }
 
     

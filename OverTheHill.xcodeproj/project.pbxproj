@@ -19,6 +19,7 @@
 		3F31A8CB2403CEFB0094B536 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */; };
 		3FAE35772428859200EDFCCA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FAE35762428859200EDFCCA /* Podfile */; };
 		3FAE358024289B1600EDFCCA /* Homes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE357F24289B1600EDFCCA /* Homes.swift */; };
+		3FC276D12429507200338A1F /* homes.realm in Resources */ = {isa = PBXBuildFile; fileRef = 3FC276D02429507200338A1F /* homes.realm */; };
 		52778F38DA3AB7CDDAC83F1B /* Pods_OverTheHill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,7 @@
 		3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		3FAE35762428859200EDFCCA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		3FAE357F24289B1600EDFCCA /* Homes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homes.swift; sourceTree = "<group>"; };
-		3FAE358124289CEA00EDFCCA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = "/Users/kimjunyoung/Downloads/NIC/20Winter/IMG214(iOS development)/project/OverTheHill/OverTheHill/default.realm"; sourceTree = "<absolute>"; };
+		3FC276D02429507200338A1F /* homes.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = homes.realm; sourceTree = SOURCE_ROOT; };
 		93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverTheHill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.release.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.release.xcconfig"; sourceTree = "<group>"; };
 		C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.debug.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +77,9 @@
 		3F31A8A7240380730094B536 /* OverTheHill */ = {
 			isa = PBXGroup;
 			children = (
-				3FAE358124289CEA00EDFCCA /* default.realm */,
 				3F31A8A8240380730094B536 /* AppDelegate.swift */,
 				3FAE357F24289B1600EDFCCA /* Homes.swift */,
+				3FC276D02429507200338A1F /* homes.realm */,
 				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
 				3F31A8B0240380730094B536 /* Main.storyboard */,
 				3F31A8B3240380740094B536 /* Assets.xcassets */,
@@ -173,6 +174,7 @@
 			files = (
 				3F31A8B7240380740094B536 /* LaunchScreen.storyboard in Resources */,
 				3F31A8B4240380740094B536 /* Assets.xcassets in Resources */,
+				3FC276D12429507200338A1F /* homes.realm in Resources */,
 				3FAE35772428859200EDFCCA /* Podfile in Resources */,
 				3F31A8B2240380730094B536 /* Main.storyboard in Resources */,
 			);

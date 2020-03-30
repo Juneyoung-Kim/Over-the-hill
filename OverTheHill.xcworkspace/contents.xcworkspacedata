@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/kimjunyoung/Downloads/NIC/20Winter/IMG214(iOS development)/project/OverTheHill/OverTheHill/default.realm">
-   </FileRef>
-   <FileRef
       location = "group:OverTheHill.xcodeproj">
    </FileRef>
    <FileRef

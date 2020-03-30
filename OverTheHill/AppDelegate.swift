@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let config = Realm.Configuration(
                    // Get the URL to the bundled file
-                   fileURL: Bundle.main.url(forResource: "Homes", withExtension: "realm"),
+                   fileURL: Bundle.main.url(forResource: "homes", withExtension: "realm"),
                    // Open the file in read-only mode as application bundles are not writeable
                    readOnly: true)
         

@@ -195,7 +195,6 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="375" height="158"/>
                                 <connections>
-                                    <outlet property="label" destination="tza-jb-81J" id="JYZ-YY-aRu"/>
                                     <outlet property="listingImg" destination="YZq-MF-WFe" id="ePz-C0-Bn9"/>
                                     <outlet property="listingName" destination="tza-jb-81J" id="hPK-9d-lFN"/>
                                     <outlet property="location" destination="Vpd-Cl-TTC" id="pRc-0X-F4j"/>
@@ -280,7 +279,7 @@
             <objects>
                 <viewController id="5yl-rW-fHR" customClass="ListingViewController" customModule="OverTheHill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OfX-5a-yq8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listing name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-UJ-f29">
@@ -383,7 +382,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eVK-au-Lya">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="eVK-au-Lya">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rT4-Pq-dAq">
@@ -718,6 +717,6 @@ Sun Closed</string>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qdH-ah-X0K"/>
+        <segue reference="1hC-0d-V8Y"/>
     </inferredMetricsTieBreakers>
 </document>

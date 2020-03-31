@@ -23,6 +23,7 @@
 		3FDEEBFA2432841D00771017 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBF92432841D00771017 /* NotesManager.swift */; };
 		3FDEEBFC2433301A00771017 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBFB2433301A00771017 /* NoteViewController.swift */; };
 		52778F38DA3AB7CDDAC83F1B /* Pods_OverTheHill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */; };
+		AB717F88243407D40050A533 /* Homes.realm in Resources */ = {isa = PBXBuildFile; fileRef = AB717F87243407D40050A533 /* Homes.realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3FDEEBFB2433301A00771017 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverTheHill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.release.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.release.xcconfig"; sourceTree = "<group>"; };
+		AB717F87243407D40050A533 /* Homes.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Homes.realm; sourceTree = "<group>"; };
 		C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.debug.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
 				3F31A8B0240380730094B536 /* Main.storyboard */,
 				3F31A8B3240380740094B536 /* Assets.xcassets */,
+				AB717F87243407D40050A533 /* Homes.realm */,
 				3F31A8B5240380740094B536 /* LaunchScreen.storyboard */,
 				3F31A8B8240380740094B536 /* Info.plist */,
 				3F31A8BE2403B4BF0094B536 /* HomeViewController.swift */,
@@ -180,6 +183,7 @@
 			files = (
 				3F31A8B7240380740094B536 /* LaunchScreen.storyboard in Resources */,
 				3F31A8B4240380740094B536 /* Assets.xcassets in Resources */,
+				AB717F88243407D40050A533 /* Homes.realm in Resources */,
 				3FAE35772428859200EDFCCA /* Podfile in Resources */,
 				3F31A8B2240380730094B536 /* Main.storyboard in Resources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 class ListingViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    var currentListing: ListingInfo?
+    var currentListing: Homes?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -19,28 +19,29 @@ struct ListingInfo {
 
 class ListingsCollectionViewController: UICollectionViewController {
 
-    var listings: [ListingInfo] = []
+    var listings: Results<Homes>?
     var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-    if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
-        let itemsPerRow: CGFloat = 1
-        let padding: CGFloat = 5
-        let totalPadding = padding * (itemsPerRow - 1)
-        let individualPadding = totalPadding / itemsPerRow
-        let width = collectionView.frame.width / itemsPerRow - individualPadding
-        let height = width
-        layout.itemSize = CGSize(width: width, height: height)
-        layout.minimumInteritemSpacing = padding
-        layout.minimumLineSpacing = padding
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
+            let itemsPerRow: CGFloat = 1
+            let padding: CGFloat = 5
+            let totalPadding = padding * (itemsPerRow - 1)
+            let individualPadding = totalPadding / itemsPerRow
+            let width = collectionView.frame.width / itemsPerRow - individualPadding
+            let height = width
+            layout.itemSize = CGSize(width: width, height: height)
+            layout.minimumInteritemSpacing = padding
+            layout.minimumLineSpacing = padding
         }
         
         
         let config = Realm.Configuration(
                           // Get the URL to the bundled file
-                          fileURL: Bundle.main.url(forResource: "homes", withExtension: "realm"),
+                          fileURL: Bundle.main.url(forResource: "Homes", withExtension: "realm"),
                           // Open the file in read-only mode as application bundles are not writeable
                           readOnly: true)
                
@@ -49,13 +50,13 @@ class ListingsCollectionViewController: UICollectionViewController {
                
                       // Read some data from the bundled Realm
                       let results = realm.objects(Homes.self)
+        listings = results
         
-        
-        
-        listings.append(ListingInfo(name: "\(results[0].BUSINESS_NAME)", description: "Description about Listing 1"))
-        listings.append(ListingInfo(name: "\(results[1].BUSINESS_PHONE)", description: "Description about Listing 2"))
-        listings.append(ListingInfo(name: "\(results[2].CITY)", description: "Description about Listing 3"))
-        listings.append(ListingInfo(name: "\(results[3].POSTAL_CODE)", description: "Description about Listing 4"))
+//
+//        listings.append(ListingInfo(name: "\(results[0].BUSINESS_NAME)", description: "Description about Listing 1"))
+//        listings.append(ListingInfo(name: "\(results[1].BUSINESS_PHONE)", description: "Description about Listing 2"))
+//        listings.append(ListingInfo(name: "\(results[2].CITY)", description: "Description about Listing 3"))
+//        listings.append(ListingInfo(name: "\(results[3].POSTAL_CODE)", description: "Description about Listing 4"))
         
         
         
@@ -68,7 +69,7 @@ class ListingsCollectionViewController: UICollectionViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ListingViewController {
-                   vc.currentListing = listings[currentIndex]
+            vc.currentListing = listings?[currentIndex]
                }
     }
     
@@ -80,7 +81,7 @@ class ListingsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return listings.count
+        return listings?.count ?? 1
        }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,7 +89,7 @@ class ListingsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let customCell = cell as? ListingsCollectionViewCell {
-            customCell.listingName.text = "\(listings[indexPath.row].name)"
+            customCell.listingName.text = "\(listings?[indexPath.row].BUSINESS_NAME)"
             return customCell
         }
         return cell
@@ -98,7 +99,8 @@ class ListingsCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentIndex = indexPath.row
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        print("\(indexPath)")
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 
     /*
@@ -108,12 +110,11 @@ class ListingsCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+   
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

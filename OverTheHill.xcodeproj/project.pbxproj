@@ -22,6 +22,7 @@
 		3FC276D12429507200338A1F /* homes.realm in Resources */ = {isa = PBXBuildFile; fileRef = 3FC276D02429507200338A1F /* homes.realm */; };
 		3FDEEBF824327D8200771017 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBF724327D8200771017 /* Notes.swift */; };
 		3FDEEBFA2432841D00771017 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBF92432841D00771017 /* NotesManager.swift */; };
+		3FDEEBFC2433301A00771017 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBFB2433301A00771017 /* NoteViewController.swift */; };
 		52778F38DA3AB7CDDAC83F1B /* Pods_OverTheHill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		3FC276D02429507200338A1F /* homes.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = homes.realm; sourceTree = SOURCE_ROOT; };
 		3FDEEBF724327D8200771017 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		3FDEEBF92432841D00771017 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		3FDEEBFB2433301A00771017 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		93CAA0FA232E5418401567BE /* Pods_OverTheHill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverTheHill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.release.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.release.xcconfig"; sourceTree = "<group>"; };
 		C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverTheHill.debug.xcconfig"; path = "Target Support Files/Pods-OverTheHill/Pods-OverTheHill.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				3F31A8A8240380730094B536 /* AppDelegate.swift */,
 				3FAE357F24289B1600EDFCCA /* Homes.swift */,
 				3FDEEBF724327D8200771017 /* Notes.swift */,
+				3FDEEBFB2433301A00771017 /* NoteViewController.swift */,
 				3FDEEBF92432841D00771017 /* NotesManager.swift */,
 				3FC276D02429507200338A1F /* homes.realm */,
 				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
@@ -238,6 +241,7 @@
 				3F31A8C92403BFD20094B536 /* ListingsCollectionViewCell.swift in Sources */,
 				3FDEEBFA2432841D00771017 /* NotesManager.swift in Sources */,
 				3F31A8C72403BE130094B536 /* ListingsCollectionViewController.swift in Sources */,
+				3FDEEBFC2433301A00771017 /* NoteViewController.swift in Sources */,
 				3FAE358024289B1600EDFCCA /* Homes.swift in Sources */,
 				3F31A8C52403B5580094B536 /* ProfileViewController.swift in Sources */,
 				3F31A8A9240380730094B536 /* AppDelegate.swift in Sources */,

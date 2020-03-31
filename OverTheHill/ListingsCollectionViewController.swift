@@ -88,7 +88,7 @@ class ListingsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let customCell = cell as? ListingsCollectionViewCell {
-            customCell.label.text = "\(listings[indexPath.row].name)"
+            customCell.listingName.text = "\(listings[indexPath.row].name)"
             return customCell
         }
         return cell

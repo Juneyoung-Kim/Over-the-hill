@@ -18,37 +18,76 @@ class NotesManager: NSObject {
         
     }
     
-   func addNotes (_ title:String) {
+    func addNotes (_ title:String) {
         let realm = try! Realm()
+        
+        let notes = Note()
+        notes.title = title
+//        notes.content = content
+        
+        do {
+            try realm.write {
+                realm.add(notes)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
         
     }
     
-    func getNotes() -> [NotesForPros]?{
+    func getNotes() -> [Note]?{
         let realm = try! Realm()
-      
+        let notebooks = realm.objects(Note.self)
+        
+        return notebooks.map({$0})
     }
     
-    func addNote (_ notebook:NotesForPros, content contentString:String) {
+    func addNote (_ notebook:Note, conteent contentString:String) {
         let realm = try! Realm()
+        
+        let note = Note()
+        note.content = contentString
+        
+//        do {
+//            try realm.write {
+//                note.Notes.append(note)
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+    }
+    
+    func updateNote (_ note:Note, newContent content:String) {
+        let realm = try! Realm()
+        
+        do {
+            try realm.write {
+                note.content = content
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteNote (_ note:Note) {
+        let realm = try! Realm()
+        
+        do {
+            try realm.write {
+                realm.delete(note)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
         
     }
     
-    func updateNote (_ note:NoteP, newContent content:String) {
-        let realm = try! Realm()
-        
     
-    }
+//    func getNotes (_ notebook:Note) -> [Note]? {
+//        let notes = note
+//        return notes.map({$0})
+//    }
     
-    func deleteNote (_ note:NoteP) {
-        let realm = try! Realm()
-        
-     
-    }
-    
-    
-    func getNotes (_ notebook:NotesForPros) -> [Note]? {
-      
-    }
     
     
     

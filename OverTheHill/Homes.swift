@@ -17,6 +17,7 @@ class Homes: Object {
     @objc dynamic var BUSINESS_PHONE = ""
     @objc dynamic var SENIOR_ASSISTED_LIVING = ""
     @objc dynamic var SENIOR_PUBLIC_UNITS = ""
+    let notes: Note? = Note()
 }
 
 

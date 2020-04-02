@@ -126,7 +126,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gh9-wG-LGX" customClass="ListingsCollectionViewCell" customModule="OverTheHill" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="phB-ur-VeZ" customClass="ListingsCollectionViewCell" customModule="OverTheHill" customModuleProvider="target">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="phB-ur-VeZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -189,12 +189,10 @@
                                         <constraint firstItem="59W-QE-Q09" firstAttribute="trailing" secondItem="Vpd-Cl-TTC" secondAttribute="trailing" id="zG2-gR-aDW"/>
                                         <constraint firstItem="YZq-MF-WFe" firstAttribute="bottom" secondItem="phB-ur-VeZ" secondAttribute="bottomMargin" id="zWh-zc-EBJ"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="availability" destination="59W-QE-Q09" id="zsR-zL-JiR"/>
-                                    </connections>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="375" height="158"/>
                                 <connections>
+                                    <outlet property="availability" destination="59W-QE-Q09" id="qKP-DC-WnW"/>
                                     <outlet property="listingImg" destination="YZq-MF-WFe" id="ePz-C0-Bn9"/>
                                     <outlet property="listingName" destination="tza-jb-81J" id="hPK-9d-lFN"/>
                                     <outlet property="location" destination="Vpd-Cl-TTC" id="pRc-0X-F4j"/>

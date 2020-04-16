@@ -1,14 +1,14 @@
 //
-//  NoteViewController.swift
+//  HomeMapViewController.swift
 //  OverTheHill
 //
-//  Created by Juneyoung Kim on 2020-03-31.
+//  Created by Juneyoung Kim on 2020-04-15.
 //  Copyright © 2020 Juneyoung Kim. All rights reserved.
 //
 
 import UIKit
 
-class NoteViewController: UIViewController {
+class HomeMapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +16,7 @@ class NoteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    @IBAction func add(_ sender: UIBarButtonItem) {
-//   
-//    }
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "goBacktoDetail", sender: self)
-    }
-    
+
     /*
     // MARK: - Navigation
 

@@ -32,76 +32,61 @@
         <!--Home-->
         <scene sceneID="zdL-w1-fUy">
             <objects>
-                <viewController id="iUd-ju-Oc6" sceneMemberID="viewController">
+                <viewController id="iUd-ju-Oc6" customClass="HomeViewController" customModule="OverTheHill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Tn-I5-HO2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Location..." translatesAutoresizingMaskIntoConstraints="NO" id="nnc-G3-EGo">
+                            <searchBar contentMode="redraw" ambiguous="YES" text="" placeholder="Location..." translatesAutoresizingMaskIntoConstraints="NO" id="nnc-G3-EGo">
                                 <rect key="frame" x="23" y="124" width="328" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jKY-lP-lsf">
-                                <rect key="frame" x="23" y="210" width="328" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-If-Hwy">
+                                <rect key="frame" x="34" y="204" width="317" height="247"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bN3-BN-e8G">
-                                <rect key="frame" x="10" y="409" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bN3-BN-e8G">
+                                <rect key="frame" x="130" y="483" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.94254636759999999" green="0.86878746750000002" blue="0.70585364100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Residential care">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.53840410709999997" green="0.25590467449999998" blue="0.1960522234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="ResidentialCareButton:" destination="CIk-gW-fpW" eventType="touchUpInside" id="Iff-je-A6N"/>
+                                    <segue destination="kLm-9Z-gnI" kind="show" id="MUA-VC-YJt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jNQ-Rr-LpP">
-                                <rect key="frame" x="134" y="409" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jNQ-Rr-LpP">
+                                <rect key="frame" x="130" y="552" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.94254636759999999" green="0.86878746750000002" blue="0.70585364100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Assistant Living">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.53840410709999997" green="0.25590467449999998" blue="0.1960522234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="AssistantLivingButton:" destination="CIk-gW-fpW" eventType="touchUpInside" id="nRr-I7-avB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-aY-3KL">
-                                <rect key="frame" x="256" y="409" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <state key="normal" title="Senior Village">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="SeniorLivingButton:" destination="CIk-gW-fpW" eventType="touchUpInside" id="Dtb-j1-bu2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8A-qW-Pg6">
-                                <rect key="frame" x="146" y="487" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Sign in"/>
-                                <connections>
-                                    <action selector="LoginButton:" destination="CIk-gW-fpW" eventType="touchUpInside" id="OzP-kI-Aa1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jR-qI-dC3">
-                                <rect key="frame" x="42" y="556" width="301" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Is it your first visit? Go to create an account "/>
-                                <connections>
-                                    <action selector="CreateAtButton:" destination="CIk-gW-fpW" eventType="touchUpInside" id="GQc-t4-XHs"/>
+                                    <segue destination="kLm-9Z-gnI" kind="show" id="h2j-id-GLy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bN3-BN-e8G" firstAttribute="top" secondItem="jKv-If-Hwy" secondAttribute="bottom" constant="32" id="2Ja-vN-vFm"/>
+                            <constraint firstItem="jKv-If-Hwy" firstAttribute="leading" secondItem="9eI-eZ-mN0" secondAttribute="leading" constant="34" id="AwB-QO-Tyv"/>
+                            <constraint firstItem="9eI-eZ-mN0" firstAttribute="trailing" secondItem="jNQ-Rr-LpP" secondAttribute="trailing" constant="125" id="HV8-Ao-2em"/>
+                            <constraint firstItem="9eI-eZ-mN0" firstAttribute="bottom" secondItem="jNQ-Rr-LpP" secondAttribute="bottom" constant="36" id="PWe-UH-5XB"/>
+                            <constraint firstItem="bN3-BN-e8G" firstAttribute="leading" secondItem="9eI-eZ-mN0" secondAttribute="leading" constant="130" id="Qja-1V-YEA"/>
+                            <constraint firstItem="9eI-eZ-mN0" firstAttribute="trailing" secondItem="bN3-BN-e8G" secondAttribute="trailing" constant="125" id="T5a-7H-gL0"/>
+                            <constraint firstItem="9eI-eZ-mN0" firstAttribute="trailing" secondItem="jKv-If-Hwy" secondAttribute="trailing" constant="24" id="ahM-16-1wF"/>
+                            <constraint firstItem="jKv-If-Hwy" firstAttribute="top" secondItem="nnc-G3-EGo" secondAttribute="bottom" constant="24" id="bKN-Mf-kDV"/>
+                            <constraint firstItem="jNQ-Rr-LpP" firstAttribute="leading" secondItem="9eI-eZ-mN0" secondAttribute="leading" constant="130" id="bcx-OU-OT7"/>
+                            <constraint firstItem="nnc-G3-EGo" firstAttribute="top" secondItem="9eI-eZ-mN0" secondAttribute="top" constant="28" id="dg0-aL-ktm"/>
+                            <constraint firstItem="jNQ-Rr-LpP" firstAttribute="top" secondItem="bN3-BN-e8G" secondAttribute="bottom" constant="39" id="qid-Fk-YQw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9eI-eZ-mN0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="bxP-VT-RMf"/>
+                    <connections>
+                        <outlet property="mapView" destination="jKv-If-Hwy" id="uOz-MO-Mtf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMu-jb-Hq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="CIk-gW-fpW" userLabel="Exit" sceneMemberID="exit"/>
@@ -215,16 +200,24 @@
             </objects>
             <point key="canvasLocation" x="-1623.2" y="1554.872563718141"/>
         </scene>
-        <!--View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="cyI-cc-zCQ">
             <objects>
-                <viewController id="4Lh-h5-M7b" sceneMemberID="viewController">
+                <viewController id="4Lh-h5-M7b" customClass="NoteViewController" customModule="OverTheHill" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hqn-s9-fZn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJy-bW-lAD">
+                                <rect key="frame" x="51" y="123" width="273" height="234"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-Td-YGD">
                                 <rect key="frame" x="0.0" y="-12" width="375" height="56"/>
+                                <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="Add Notes" id="o5N-oJ-abG">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="Bf8-gB-a4H">
@@ -234,7 +227,8 @@
                                                 <state key="normal" title="Cancel"/>
                                             </button>
                                             <connections>
-                                                <segue destination="5yl-rW-fHR" kind="show" id="qdH-ah-X0K"/>
+                                                <action selector="cancel:" destination="4Lh-h5-M7b" id="XFP-oG-dLJ"/>
+                                                <segue destination="5yl-rW-fHR" kind="show" identifier="goBacktoDetail" id="8CX-nw-tLu"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="VdV-bD-kqa">
@@ -243,17 +237,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Add"/>
                                             </button>
+                                            <connections>
+                                                <action selector="add:" destination="4Lh-h5-M7b" id="g9j-aO-CP7"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJy-bW-lAD">
-                                <rect key="frame" x="51" y="123" width="273" height="234"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -277,7 +267,7 @@
             <objects>
                 <viewController id="5yl-rW-fHR" customClass="ListingViewController" customModule="OverTheHill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OfX-5a-yq8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listing name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-UJ-f29">
@@ -325,7 +315,7 @@
                                 <rect key="frame" x="16" y="524" width="343" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -360,6 +350,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Listing" largeTitleDisplayMode="always" id="wmy-bi-rqf"/>
                     <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="textView" destination="1Qe-rq-WVw" id="KgC-8l-dE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkx-iV-Mzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -715,6 +708,8 @@ Sun Closed</string>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1hC-0d-V8Y"/>
+        <segue reference="UBB-QE-tiz"/>
+        <segue reference="8CX-nw-tLu"/>
+        <segue reference="MUA-VC-YJt"/>
     </inferredMetricsTieBreakers>
 </document>

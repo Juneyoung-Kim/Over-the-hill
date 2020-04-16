@@ -7,15 +7,86 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 import RealmSwift
 
-class HomeViewController: UIViewController {
 
+struct Facility {
+    var name: String
+    var latitude: CLLocationDegrees
+    var longitude: CLLocationDegrees
+}
+
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
+
+    let locationManager = CLLocationManager()
+    @IBOutlet weak var mapView: MKMapView!
+    
+    let facilities = [Facility(name: "Amica Arbutus Manor", latitude: 49.247583, longitude: -123.155612),
+                      Facility(name: "Amica Somerset House", latitude: 48.412557, longitude:-123.376142),
+                      Facility(name: "Augustine House", latitude: 49.073316, longitude: -123.077039),
+                      Facility(name: "Casa Loma Seniors Village", latitude: 49.702792, longitude: -124.992393)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //getting facilities on the map
+        checkLocationServices()
+        fetchFacilitiesOnMap(facilities)
+        
+        //getting the current location
+           locationManager.requestAlwaysAuthorization()
+             locationManager.requestWhenInUseAuthorization()
+             if CLLocationManager.locationServicesEnabled() {
+                 locationManager.delegate = self
+                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                 locationManager.startUpdatingLocation()
+             }
+         }
 
-        // Do any additional setup after loading the view.
-    }
+         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+             guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+             print("locations = \(locValue.latitude) \(locValue.longitude)")
+         }
+    
+    
+    // setting facilities
+        
+    func checkLocationServices() {
+          if CLLocationManager.locationServicesEnabled() {
+            checkLocationAuthorization()
+          } else {
+            // Show alert letting the user know they have to turn this on.
+          }
+        }
+    
+        
+    func checkLocationAuthorization() {
+            switch CLLocationManager.authorizationStatus() {
+            case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+           
+            
+            case .denied: // Show alert telling users how to turn on permissions
+                break
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+                mapView.showsUserLocation = true
+            case .restricted: // Show an alert letting them know what’s up
+                break
+            case .authorizedAlways:
+                break
+        }
+}
+
+func fetchFacilitiesOnMap(_ facilities: [Facility]) {
+   for facility in facilities {
+     let annotations = MKPointAnnotation()
+     annotations.title = facility.name
+     annotations.coordinate = CLLocationCoordinate2D(latitude: facility.latitude, longitude: facility.longitude)
+     mapView.addAnnotation(annotations)
+   }
+ }
     
 
     /*
@@ -28,18 +99,11 @@ class HomeViewController: UIViewController {
     }
     */
 
-    @IBAction func ResidentialCareButton() {
-    }
-    
-    @IBAction func AssistantLivingButton() {
-    }
-    
-    @IBAction func SeniorLivingButton() {
-    }
-    
-    @IBAction func LoginButton() {
-    }
-    
-    @IBAction func CreateAtButton() {
-    }
+//    @IBAction func ResidentialCareButton() {
+//
+//    }
+//
+//    @IBAction func AssistantLivingButton() {
+//    }
+//
 }

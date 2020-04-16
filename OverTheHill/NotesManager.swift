@@ -42,7 +42,7 @@ class NotesManager: NSObject {
         return notebooks.map({$0})
     }
     
-    func addNote (_ notebook:Note, conteent contentString:String) {
+    func addNote (_ notebook:Note, content contentString:String) {
         let realm = try! Realm()
         
         let note = Note()

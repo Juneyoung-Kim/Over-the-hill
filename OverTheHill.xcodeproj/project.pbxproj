@@ -84,21 +84,21 @@
 			isa = PBXGroup;
 			children = (
 				3F31A8A8240380730094B536 /* AppDelegate.swift */,
-				3FAE357F24289B1600EDFCCA /* Homes.swift */,
-				3FDEEBF724327D8200771017 /* Notes.swift */,
-				3FDEEBFB2433301A00771017 /* NoteViewController.swift */,
-				3FDEEBF92432841D00771017 /* NotesManager.swift */,
-				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
-				3F31A8B0240380730094B536 /* Main.storyboard */,
 				3F31A8B3240380740094B536 /* Assets.xcassets */,
 				AB717F87243407D40050A533 /* Homes.realm */,
-				3F31A8B5240380740094B536 /* LaunchScreen.storyboard */,
-				3F31A8B8240380740094B536 /* Info.plist */,
+				3FAE357F24289B1600EDFCCA /* Homes.swift */,
 				3F31A8BE2403B4BF0094B536 /* HomeViewController.swift */,
-				3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */,
+				3F31A8B8240380740094B536 /* Info.plist */,
+				3F31A8B5240380740094B536 /* LaunchScreen.storyboard */,
 				3F31A8C82403BFD20094B536 /* ListingsCollectionViewCell.swift */,
 				3F31A8C62403BE130094B536 /* ListingsCollectionViewController.swift */,
+				3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */,
+				3F31A8B0240380730094B536 /* Main.storyboard */,
+				3FDEEBF724327D8200771017 /* Notes.swift */,
+				3FDEEBF92432841D00771017 /* NotesManager.swift */,
+				3FDEEBFB2433301A00771017 /* NoteViewController.swift */,
 				3F31A8C42403B5580094B536 /* ProfileViewController.swift */,
+				3F31A8AA240380730094B536 /* SceneDelegate.swift */,
 			);
 			path = OverTheHill;
 			sourceTree = "<group>";

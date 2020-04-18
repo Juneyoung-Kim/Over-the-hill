@@ -69,24 +69,9 @@ class NotesManager: NSObject {
         }
     }
     
-    func deleteNote (_ note:Note) {
-        let realm = try! Realm()
-        
-        do {
-            try realm.write {
-                realm.delete(note)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-    }
+   
     
-    
-//    func getNotes (_ notebook:Note) -> [Note]? {
-//        let notes = note
-//        return notes.map({$0})
-//    }
+
     
     
     

@@ -18,18 +18,21 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="jrj-Jx-MB9">
                                 <rect key="frame" x="196" y="728" width="22" height="20"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone (180x180)" translatesAutoresizingMaskIntoConstraints="NO" id="Oks-55-Z2H">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone (180x180)" translatesAutoresizingMaskIntoConstraints="NO" id="Oks-55-Z2H">
                                 <rect key="frame" x="0.0" y="223" width="414" height="421"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94254636759999999" green="0.86878746750000002" blue="0.70585364100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94254636759999999" green="0.86878746750000002" blue="0.70585364100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Oks-55-Z2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="179" id="0zp-Qp-lrl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrj-Jx-MB9" secondAttribute="trailing" constant="196" id="1n7-Wb-mcQ"/>
+                            <constraint firstItem="Oks-55-Z2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ADf-nd-sz7"/>
+                            <constraint firstItem="Oks-55-Z2H" firstAttribute="centerX" secondItem="jrj-Jx-MB9" secondAttribute="centerX" id="Pzm-68-4iI"/>
                             <constraint firstItem="jrj-Jx-MB9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="196" id="QZC-RV-xmJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jrj-Jx-MB9" secondAttribute="bottom" constant="114" id="VZq-AB-Min"/>
                             <constraint firstItem="jrj-Jx-MB9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="684" id="WBu-i5-loY"/>
+                            <constraint firstItem="jrj-Jx-MB9" firstAttribute="top" secondItem="Oks-55-Z2H" secondAttribute="bottom" constant="84" id="xa3-o1-LFC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 class ListingViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var listingMap: MKMapView!
     var currentListing: Homes?
+    
+    @IBOutlet weak var booking: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

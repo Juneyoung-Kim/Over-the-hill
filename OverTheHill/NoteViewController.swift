@@ -7,21 +7,42 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NoteViewController: UIViewController {
 
+    @IBOutlet weak var noteTexts: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-//    @IBAction func add(_ sender: UIBarButtonItem) {
-//   
-//    }
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "goBacktoDetail", sender: self)
+
+  
+    @IBAction func addNotes(_ sender: UIButton) {
+        let realm = try! Realm()
+        let note = Note()
+        
+        note.title = ""
+        note.content = noteTexts.text
+        
+        do {
+            try realm.write {
+                realm.add(note)
+                print(note)
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
     }
+    
+    @IBAction func cancelNotes(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     
     /*
     // MARK: - Navigation

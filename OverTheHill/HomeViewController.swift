@@ -20,6 +20,7 @@ struct Facility {
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     

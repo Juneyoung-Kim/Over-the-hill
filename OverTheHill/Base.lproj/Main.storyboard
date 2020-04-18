@@ -37,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" ambiguous="YES" text="" placeholder="Location..." translatesAutoresizingMaskIntoConstraints="NO" id="nnc-G3-EGo">
-                                <rect key="frame" x="23" y="124" width="328" height="56"/>
+                            <searchBar contentMode="redraw" text="" placeholder="Location..." translatesAutoresizingMaskIntoConstraints="NO" id="nnc-G3-EGo">
+                                <rect key="frame" x="24" y="124" width="327" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-If-Hwy">
@@ -75,7 +75,9 @@
                             <constraint firstItem="9eI-eZ-mN0" firstAttribute="bottom" secondItem="jNQ-Rr-LpP" secondAttribute="bottom" constant="36" id="PWe-UH-5XB"/>
                             <constraint firstItem="bN3-BN-e8G" firstAttribute="leading" secondItem="9eI-eZ-mN0" secondAttribute="leading" constant="130" id="Qja-1V-YEA"/>
                             <constraint firstItem="9eI-eZ-mN0" firstAttribute="trailing" secondItem="bN3-BN-e8G" secondAttribute="trailing" constant="125" id="T5a-7H-gL0"/>
+                            <constraint firstItem="nnc-G3-EGo" firstAttribute="trailing" secondItem="jKv-If-Hwy" secondAttribute="trailing" id="TVJ-9b-8vZ"/>
                             <constraint firstItem="9eI-eZ-mN0" firstAttribute="trailing" secondItem="jKv-If-Hwy" secondAttribute="trailing" constant="24" id="ahM-16-1wF"/>
+                            <constraint firstItem="nnc-G3-EGo" firstAttribute="centerX" secondItem="8Tn-I5-HO2" secondAttribute="centerX" id="anD-zo-wOM"/>
                             <constraint firstItem="jKv-If-Hwy" firstAttribute="top" secondItem="nnc-G3-EGo" secondAttribute="bottom" constant="24" id="bKN-Mf-kDV"/>
                             <constraint firstItem="jNQ-Rr-LpP" firstAttribute="leading" secondItem="9eI-eZ-mN0" secondAttribute="leading" constant="130" id="bcx-OU-OT7"/>
                             <constraint firstItem="nnc-G3-EGo" firstAttribute="top" secondItem="9eI-eZ-mN0" secondAttribute="top" constant="28" id="dg0-aL-ktm"/>
@@ -86,6 +88,7 @@
                     <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="bxP-VT-RMf"/>
                     <connections>
                         <outlet property="mapView" destination="jKv-If-Hwy" id="uOz-MO-Mtf"/>
+                        <outlet property="searchBar" destination="nnc-G3-EGo" id="y7u-Aa-85K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMu-jb-Hq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,7 +218,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-Td-YGD">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-Td-YGD">
                                 <rect key="frame" x="0.0" y="-12" width="375" height="56"/>
                                 <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
@@ -225,10 +228,12 @@
                                                 <rect key="frame" x="16" y="13" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelNotes:" destination="4Lh-h5-M7b" eventType="touchUpInside" id="RLO-cT-v0M"/>
+                                                </connections>
                                             </button>
                                             <connections>
-                                                <action selector="cancel:" destination="4Lh-h5-M7b" id="XFP-oG-dLJ"/>
-                                                <segue destination="5yl-rW-fHR" kind="show" identifier="goBacktoDetail" id="8CX-nw-tLu"/>
+                                                <segue destination="5yl-rW-fHR" kind="show" identifier="goBackToDetail" id="QvP-9o-QiS"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="VdV-bD-kqa">
@@ -236,7 +241,11 @@
                                                 <rect key="frame" x="276" y="13" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <action selector="addNotes:" destination="4Lh-h5-M7b" eventType="touchUpInside" id="Lw0-P2-FR6"/>
+                                                </connections>
                                             </button>
+                                            <color key="tintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
                                                 <action selector="add:" destination="4Lh-h5-M7b" id="g9j-aO-CP7"/>
                                             </connections>
@@ -249,6 +258,7 @@
                         <constraints>
                             <constraint firstItem="YJy-bW-lAD" firstAttribute="centerX" secondItem="J6k-Td-YGD" secondAttribute="centerX" id="0SM-lE-SWk"/>
                             <constraint firstItem="xSi-l8-V0v" firstAttribute="bottom" secondItem="YJy-bW-lAD" secondAttribute="bottom" constant="123" id="7NK-WO-SWO"/>
+                            <constraint firstItem="J6k-Td-YGD" firstAttribute="leading" secondItem="xSi-l8-V0v" secondAttribute="leading" id="FjL-O8-Wsi"/>
                             <constraint firstItem="YJy-bW-lAD" firstAttribute="top" secondItem="J6k-Td-YGD" secondAttribute="bottom" constant="79" id="OBB-wT-yid"/>
                             <constraint firstItem="xSi-l8-V0v" firstAttribute="trailing" secondItem="YJy-bW-lAD" secondAttribute="trailing" constant="51" id="QG5-W2-QTE"/>
                             <constraint firstItem="YJy-bW-lAD" firstAttribute="leading" secondItem="xSi-l8-V0v" secondAttribute="leading" constant="51" id="sTm-Rb-1Cw"/>
@@ -256,11 +266,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSi-l8-V0v"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f6K-3D-y5a"/>
                     <size key="freeformSize" width="375" height="500"/>
+                    <connections>
+                        <outlet property="noteTexts" destination="YJy-bW-lAD" id="jRq-YK-BZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRv-PZ-9M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-716" y="2842"/>
+            <point key="canvasLocation" x="-642" y="2718"/>
         </scene>
         <!--Listing-->
         <scene sceneID="RJh-ej-0LF">
@@ -315,13 +329,13 @@
                                 <rect key="frame" x="16" y="524" width="343" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-hd-zf3">
-                                <rect key="frame" x="22" y="862" width="337" height="159"/>
+                                <rect key="frame" x="19" y="902" width="337" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-Aw-xKN">
@@ -332,16 +346,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REf-RU-SKj">
-                                <rect key="frame" x="148" y="1070" width="79" height="30"/>
+                                <rect key="frame" x="144" y="1122" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Book a tour"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-De-AqN">
-                                <rect key="frame" x="155" y="758" width="65" height="30"/>
+                                <rect key="frame" x="144" y="771" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Note"/>
                                 <connections>
-                                    <segue destination="4Lh-h5-M7b" kind="presentation" id="UBB-QE-tiz"/>
+                                    <segue destination="4Lh-h5-M7b" kind="presentation" id="OGB-rf-8Me"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -351,6 +365,7 @@
                     <navigationItem key="navigationItem" title="Listing" largeTitleDisplayMode="always" id="wmy-bi-rqf"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="listingMap" destination="QTX-hd-zf3" id="mwV-dO-xqf"/>
                         <outlet property="textView" destination="1Qe-rq-WVw" id="KgC-8l-dE0"/>
                     </connections>
                 </viewController>
@@ -708,8 +723,8 @@ Sun Closed</string>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UBB-QE-tiz"/>
-        <segue reference="8CX-nw-tLu"/>
+        <segue reference="OGB-rf-8Me"/>
+        <segue reference="QvP-9o-QiS"/>
         <segue reference="MUA-VC-YJt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -124,8 +124,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZq-MF-WFe">
-                                            <rect key="frame" x="16" y="8" width="142" height="142"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YZq-MF-WFe">
+                                            <rect key="frame" x="16" y="7.5" width="142" height="141.5"/>
+                                            <color key="tintColor" red="0.53840410709999997" green="0.25590467449999998" blue="0.1960522234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="FzF-0p-1bd"/>
                                                 <constraint firstAttribute="width" constant="142" id="Yvr-0l-ogS"/>
@@ -156,7 +157,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="Vpd-Cl-TTC" firstAttribute="bottom" secondItem="YZq-MF-WFe" secondAttribute="bottom" id="0KX-64-1FA"/>
                                         <constraint firstItem="tza-jb-81J" firstAttribute="leading" secondItem="mkn-11-FhE" secondAttribute="leading" id="A7K-2e-JxY"/>
@@ -281,29 +282,30 @@
             <objects>
                 <viewController id="5yl-rW-fHR" customClass="ListingViewController" customModule="OverTheHill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OfX-5a-yq8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listing name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-UJ-f29">
-                                <rect key="frame" x="204" y="122" width="98" height="21"/>
+                                <rect key="frame" x="204" y="122" width="155" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyh-js-zbs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kyh-js-zbs">
                                 <rect key="frame" x="16" y="122" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Form of facility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-dw-wrL">
-                                <rect key="frame" x="204" y="192" width="114" height="21"/>
+                                <rect key="frame" x="204" y="192" width="155" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Qe-rq-WVw">
-                                <rect key="frame" x="16" y="337" width="343" height="128"/>
+                                <rect key="frame" x="16" y="337" width="302" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -326,16 +328,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-Qn-xF5">
-                                <rect key="frame" x="16" y="524" width="343" height="128"/>
+                                <rect key="frame" x="16" y="524" width="302" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-hd-zf3">
-                                <rect key="frame" x="19" y="902" width="337" height="159"/>
+                                <rect key="frame" x="22" y="879" width="337" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-Aw-xKN">
@@ -345,11 +347,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REf-RU-SKj">
-                                <rect key="frame" x="144" y="1122" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Book a tour"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-De-AqN">
                                 <rect key="frame" x="144" y="771" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -358,6 +355,11 @@
                                     <segue destination="4Lh-h5-M7b" kind="presentation" id="OGB-rf-8Me"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REf-RU-SKj">
+                                <rect key="frame" x="151" y="1080" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Book a tour"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UJf-Iw-cBi"/>
@@ -365,13 +367,16 @@
                     <navigationItem key="navigationItem" title="Listing" largeTitleDisplayMode="always" id="wmy-bi-rqf"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="listingDescription" destination="1Qe-rq-WVw" id="10p-fr-Lvv"/>
+                        <outlet property="listingInfo" destination="k3V-Qn-xF5" id="bKR-Pc-yME"/>
                         <outlet property="listingMap" destination="QTX-hd-zf3" id="mwV-dO-xqf"/>
-                        <outlet property="textView" destination="1Qe-rq-WVw" id="KgC-8l-dE0"/>
+                        <outlet property="listingName" destination="hSh-UJ-f29" id="uwq-ta-PGF"/>
+                        <outlet property="typeOfFacility" destination="hW4-dw-wrL" id="Sxv-fq-eEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkx-iV-Mzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1623" y="2632"/>
+            <point key="canvasLocation" x="-1623.2" y="2631.1844077961023"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Kzg-Bo-Q5G">
@@ -395,10 +400,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXP-pH-sI1">
-                                            <rect key="frame" x="17" y="0.0" width="153" height="153"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFZ-wP-3s6">
                                             <rect key="frame" x="188" y="37" width="39" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -434,6 +435,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXP-pH-sI1">
+                                            <rect key="frame" x="24" y="0.0" width="153" height="153"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="375" height="153"/>
@@ -540,6 +545,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3zm-lm-YFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -559,6 +565,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ddd-Eo-0XW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -665,6 +672,7 @@ Sun Closed</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="n61-kU-jAo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -681,9 +689,10 @@ Sun Closed</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZF-zl-JDZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Listings" image="list.bullet" catalog="system" id="FXe-JA-dhC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IAy-y2-BZu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="IAy-y2-BZu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -703,6 +712,7 @@ Sun Closed</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="18U-Nv-iXB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78860646489999997" green="0.53132593630000002" blue="0.38819772009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -716,6 +726,7 @@ Sun Closed</string>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
@@ -723,8 +734,7 @@ Sun Closed</string>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OGB-rf-8Me"/>
-        <segue reference="QvP-9o-QiS"/>
-        <segue reference="MUA-VC-YJt"/>
+        <segue reference="1hC-0d-V8Y"/>
+        <segue reference="h2j-id-GLy"/>
     </inferredMetricsTieBreakers>
 </document>

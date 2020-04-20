@@ -3,22 +3,4 @@
    uuid = "D5C400EB-BF43-49C7-9B93-E758D664F6C8"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9D87CE03-6386-4AC0-A707-1AAD24AA2F8C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OverTheHill/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

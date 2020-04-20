@@ -90,6 +90,14 @@ class ListingsCollectionViewController: UICollectionViewController {
         // Configure the cell
         if let customCell = cell as? ListingsCollectionViewCell {
             customCell.listingName.text = "\(String(describing: listings?[indexPath.row].BUSINESS_NAME))"
+            
+            customCell.typeOfFacility.text = "\(String(describing: listings?[indexPath.row].TYPE))"
+            
+            customCell.availability.text = "\(String(describing: listings?[indexPath.row].SENIOR_PUBLIC_UNITS))"
+            
+            customCell.location.text = "\(String(describing: listings?[indexPath.row].POSTAL_CODE))"
+            
+         
             return customCell
         }
         return cell

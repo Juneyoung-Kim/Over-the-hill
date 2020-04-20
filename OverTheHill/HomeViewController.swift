@@ -89,7 +89,10 @@ func fetchFacilitiesOnMap(_ facilities: [Facility]) {
    }
  }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.navigationBar.barTintColor =  #colorLiteral(red: 0.788, green: 0.531, blue: 0.388, alpha: 1.0)
+        
+    }
     /*
     // MARK: - Navigation
 

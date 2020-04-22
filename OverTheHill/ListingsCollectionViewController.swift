@@ -25,20 +25,6 @@ class ListingsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
-//            let itemsPerRow: CGFloat = 1
-//            let padding: CGFloat = 5
-//            let totalPadding = padding * (itemsPerRow - 1)
-//            let individualPadding = totalPadding / itemsPerRow
-//            let width = collectionView.frame.width / itemsPerRow - individualPadding
-//            let height = width
-//            layout.itemSize = CGSize(width: width, height: height)
-//            layout.minimumInteritemSpacing = padding
-//            layout.minimumLineSpacing = padding
-//        }
-        
-        
         let config = Realm.Configuration(
                           // Get the URL to the bundled file
                           fileURL: Bundle.main.url(forResource: "Homes", withExtension: "realm"),
@@ -51,15 +37,6 @@ class ListingsCollectionViewController: UICollectionViewController {
                       // Read some data from the bundled Realm
                       let results = realm.objects(Homes.self)
         listings = results
-        
-//
-//        listings.append(ListingInfo(name: "\(results[0].BUSINESS_NAME)", description: "Description about Listing 1"))
-//        listings.append(ListingInfo(name: "\(results[1].BUSINESS_PHONE)", description: "Description about Listing 2"))
-//        listings.append(ListingInfo(name: "\(results[2].CITY)", description: "Description about Listing 3"))
-//        listings.append(ListingInfo(name: "\(results[3].POSTAL_CODE)", description: "Description about Listing 4"))
-        
-        
-        
         
     }
 
@@ -89,16 +66,14 @@ class ListingsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let customCell = cell as? ListingsCollectionViewCell {
-            customCell.listingName.text = "\(String(describing: listings?[indexPath.row].BUSINESS_NAME))"
+            customCell.listingName.text = "\(String(describing: listings![indexPath.row].BUSINESS_NAME))"
             
-            customCell.typeOfFacility.text = "\(String(describing: listings?[indexPath.row].TYPE))"
+            customCell.typeOfFacility.text = "\(String(describing: listings![indexPath.row].TYPE))"
             
-            customCell.availability.text = "\(String(describing: listings?[indexPath.row].SENIOR_PUBLIC_UNITS))"
+            customCell.availability.text = "\(String(describing: listings![indexPath.row].SENIOR_PUBLIC_UNITS))"
             
-            customCell.location.text = "\(String(describing: listings?[indexPath.row].POSTAL_CODE))"
+            customCell.location.text = "\(String(describing: listings![indexPath.row].POSTAL_CODE))"
             
-            
-         
             return customCell
         }
         return cell

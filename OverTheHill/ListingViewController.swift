@@ -31,8 +31,8 @@ class ListingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
 
-        listingName?.text = currentListing?.BUSINESS_NAME
-        typeOfFacility?.text = currentListing?.TYPE
+        listingName.text = currentListing?.BUSINESS_NAME 
+        typeOfFacility.text = currentListing?.TYPE
         
         listingInfo.text = currentListing?.description ?? "No description found"
         

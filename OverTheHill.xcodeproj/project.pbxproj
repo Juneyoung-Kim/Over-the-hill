@@ -10,13 +10,13 @@
 		3F31A8A9240380730094B536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8A8240380730094B536 /* AppDelegate.swift */; };
 		3F31A8AB240380730094B536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8AA240380730094B536 /* SceneDelegate.swift */; };
 		3F31A8B2240380730094B536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F31A8B0240380730094B536 /* Main.storyboard */; };
-		3F31A8B4240380740094B536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F31A8B3240380740094B536 /* Assets.xcassets */; };
 		3F31A8B7240380740094B536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F31A8B5240380740094B536 /* LaunchScreen.storyboard */; };
 		3F31A8BF2403B4BF0094B536 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8BE2403B4BF0094B536 /* HomeViewController.swift */; };
 		3F31A8C52403B5580094B536 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8C42403B5580094B536 /* ProfileViewController.swift */; };
 		3F31A8C72403BE130094B536 /* ListingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8C62403BE130094B536 /* ListingsCollectionViewController.swift */; };
 		3F31A8C92403BFD20094B536 /* ListingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8C82403BFD20094B536 /* ListingsCollectionViewCell.swift */; };
 		3F31A8CB2403CEFB0094B536 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31A8CA2403CEFB0094B536 /* ListingViewController.swift */; };
+		3F87F4C7244FFB1500CB2B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F31A8B3240380740094B536 /* Assets.xcassets */; };
 		3FAE35772428859200EDFCCA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FAE35762428859200EDFCCA /* Podfile */; };
 		3FAE358024289B1600EDFCCA /* Homes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE357F24289B1600EDFCCA /* Homes.swift */; };
 		3FDEEBF824327D8200771017 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEEBF724327D8200771017 /* Notes.swift */; };
@@ -182,10 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F31A8B7240380740094B536 /* LaunchScreen.storyboard in Resources */,
-				3F31A8B4240380740094B536 /* Assets.xcassets in Resources */,
 				AB717F88243407D40050A533 /* Homes.realm in Resources */,
 				3FAE35772428859200EDFCCA /* Podfile in Resources */,
 				3F31A8B2240380730094B536 /* Main.storyboard in Resources */,
+				3F87F4C7244FFB1500CB2B4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C13024E936088F28C2BADD28 /* Pods-OverTheHill.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q52N4ADJ7V;
 				INFOPLIST_FILE = OverTheHill/Info.plist;
@@ -410,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A19C4207438CBCDEFF277369 /* Pods-OverTheHill.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q52N4ADJ7V;
 				INFOPLIST_FILE = OverTheHill/Info.plist;

@@ -26,17 +26,17 @@ class ListingsCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
 
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
-            let itemsPerRow: CGFloat = 1
-            let padding: CGFloat = 5
-            let totalPadding = padding * (itemsPerRow - 1)
-            let individualPadding = totalPadding / itemsPerRow
-            let width = collectionView.frame.width / itemsPerRow - individualPadding
-            let height = width
-            layout.itemSize = CGSize(width: width, height: height)
-            layout.minimumInteritemSpacing = padding
-            layout.minimumLineSpacing = padding
-        }
+//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
+//            let itemsPerRow: CGFloat = 1
+//            let padding: CGFloat = 5
+//            let totalPadding = padding * (itemsPerRow - 1)
+//            let individualPadding = totalPadding / itemsPerRow
+//            let width = collectionView.frame.width / itemsPerRow - individualPadding
+//            let height = width
+//            layout.itemSize = CGSize(width: width, height: height)
+//            layout.minimumInteritemSpacing = padding
+//            layout.minimumLineSpacing = padding
+//        }
         
         
         let config = Realm.Configuration(
@@ -97,11 +97,13 @@ class ListingsCollectionViewController: UICollectionViewController {
             
             customCell.location.text = "\(String(describing: listings?[indexPath.row].POSTAL_CODE))"
             
+            
          
             return customCell
         }
         return cell
     }
+  
 
     // MARK: UICollectionViewDelegate
     
@@ -140,3 +142,6 @@ class ListingsCollectionViewController: UICollectionViewController {
     */
 
 }
+
+
+

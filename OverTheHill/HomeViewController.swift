@@ -64,9 +64,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
     func checkLocationAuthorization() {
             switch CLLocationManager.authorizationStatus() {
-                
             case .authorizedWhenInUse:
             mapView.showsUserLocation = true
+           
+            
             case .denied: // Show alert telling users how to turn on permissions
                 break
             case .notDetermined:

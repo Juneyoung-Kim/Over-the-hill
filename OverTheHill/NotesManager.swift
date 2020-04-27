@@ -48,13 +48,6 @@ class NotesManager: NSObject {
         let note = Note()
         note.content = contentString
         
-//        do {
-//            try realm.write {
-//                note.Notes.append(note)
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
     }
     
     func updateNote (_ note:Note, newContent content:String) {

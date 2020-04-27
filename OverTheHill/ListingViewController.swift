@@ -11,17 +11,18 @@ import MapKit
 
 class ListingViewController: UIViewController {
 
+    @IBOutlet weak var listingImg: UIImageView!
+    
     @IBOutlet weak var listingName: UILabel!
-    @IBOutlet weak var typeOfFacility: UILabel!
+    @IBOutlet weak var typeOfHome: UILabel!
     
-    @IBOutlet weak var listingDescription: UITextView!
     @IBOutlet weak var listingInfo: UITextView!
-    
-    @IBOutlet weak var listingMap: MKMapView!
    
+    @IBOutlet weak var listingMap: MKMapView!
+    
+    @IBOutlet weak var booktour: UIButton!
     
     var currentListing: Homes?
-    
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,8 @@ class ListingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
 
-        listingName?.text = currentListing?.BUSINESS_NAME
-        typeOfFacility?.text = currentListing?.TYPE
+        typeOfHome.text = currentListing?.TYPE
         
         listingInfo.text = currentListing?.description ?? "No description found"
-        
-       }
-
-  
+       }  
 }

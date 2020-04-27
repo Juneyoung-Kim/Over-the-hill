@@ -21,23 +21,33 @@ class ListingsCollectionViewController: UICollectionViewController {
 
     var listings: Results<Homes>?
     var currentIndex = 0
+    var images:[UIImage?] =
+        [ UIImage(named: "img/1.jpg"),
+          UIImage(named: "img/2.jpg"),
+          UIImage(named: "img/3.jpg"),
+          UIImage(named: "img/4.jpeg"),
+          UIImage(named: "img/5.jpg"),
+          UIImage(named: "img/6.jpg"),
+          UIImage(named: "img/7.png"),
+          UIImage(named: "img/8.jpeg"),
+          UIImage(named: "img/9.jpeg"),
+          UIImage(named: "img/10.jpeg"),
+          UIImage(named: "img/11.jpg"),
+          UIImage(named: "img/12.jpg"),
+          UIImage(named: "img/13.jpg"),
+          UIImage(named: "img/14.jpeg"),
+          UIImage(named: "img/15.jpeg"),
+          UIImage(named: "img/16.jpg"),
+          UIImage(named: "img/17.jpg"),
+          UIImage(named: "img/18.jpg"),
+          UIImage(named: "img/19.jpg"),
+          UIImage(named: "img/20.jpg")]
+    
+    var randomPrice = ["$3,200","$4,550","$3,450","$2,570","$2,200","$3,400","$2,300","$3,100","$2,500","$2,100","$3,220","$3,150","$2,400","$4,300","$2,700","$2,990","$3,210","$4,100","$2,300","$4,000"]
+    var currencyFormatter = "$"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout{
-//            let itemsPerRow: CGFloat = 1
-//            let padding: CGFloat = 5
-//            let totalPadding = padding * (itemsPerRow - 1)
-//            let individualPadding = totalPadding / itemsPerRow
-//            let width = collectionView.frame.width / itemsPerRow - individualPadding
-//            let height = width
-//            layout.itemSize = CGSize(width: width, height: height)
-//            layout.minimumInteritemSpacing = padding
-//            layout.minimumLineSpacing = padding
-//        }
-        
         
         let config = Realm.Configuration(
                           // Get the URL to the bundled file
@@ -51,15 +61,6 @@ class ListingsCollectionViewController: UICollectionViewController {
                       // Read some data from the bundled Realm
                       let results = realm.objects(Homes.self)
         listings = results
-        
-//
-//        listings.append(ListingInfo(name: "\(results[0].BUSINESS_NAME)", description: "Description about Listing 1"))
-//        listings.append(ListingInfo(name: "\(results[1].BUSINESS_PHONE)", description: "Description about Listing 2"))
-//        listings.append(ListingInfo(name: "\(results[2].CITY)", description: "Description about Listing 3"))
-//        listings.append(ListingInfo(name: "\(results[3].POSTAL_CODE)", description: "Description about Listing 4"))
-        
-        
-        
         
     }
 
@@ -81,7 +82,7 @@ class ListingsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listings?.count ?? 1
+        return min(20, listings?.count ?? 1)
        }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,16 +90,19 @@ class ListingsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let customCell = cell as? ListingsCollectionViewCell {
-            customCell.listingName.text = "\(String(describing: listings?[indexPath.row].BUSINESS_NAME))"
             
-            customCell.typeOfFacility.text = "\(String(describing: listings?[indexPath.row].TYPE))"
+            customCell.listingImg.image = images[indexPath.row]
             
-            customCell.availability.text = "\(String(describing: listings?[indexPath.row].SENIOR_PUBLIC_UNITS))"
+            customCell.listingName.text = "\(String(describing: listings![indexPath.row].BUSINESS_NAME))"
             
-            customCell.location.text = "\(String(describing: listings?[indexPath.row].POSTAL_CODE))"
+            customCell.price.text = "\(String(randomPrice[indexPath.row]))"
             
+            customCell.typeOfFacility.text = "\(String(describing: listings![indexPath.row].TYPE))"
             
-         
+            customCell.availability.text = "\(String(describing: listings![indexPath.row].SENIOR_PUBLIC_UNITS))"
+            
+            customCell.location.text = "\(String(describing: listings![indexPath.row].POSTAL_CODE))"
+            
             return customCell
         }
         return cell
@@ -111,36 +115,14 @@ class ListingsCollectionViewController: UICollectionViewController {
         currentIndex = indexPath.row
         print("\(indexPath)")
         performSegue(withIdentifier: "showDetail", sender: self)
+        
+        
     }
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
    
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 
